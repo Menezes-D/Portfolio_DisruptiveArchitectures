@@ -42,37 +42,40 @@ Este projeto é um **dashboard interativo de dados de temperatura de dispositivo
 1. Clone o repositório:
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
-cd <NOME_DO_PROJETO>
-
+git clone https://github.com/Menezes-D/Portfolio_DisruptiveArchitectures.git
+cd pipeline-iot
+```
 
 2. Suba o container ClickHouse com Docker Compose:
 
 ```bash
 docker-compose up -d
-
+```
 
 3. Instale as dependências Python:
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 4. Abra o terminal na pasta src e execute o dashboard
 
 ```bash
 streamlit run main.py
+```
 
+---
 
-5. Abra o navegador na URL exibida pelo Streamlit (geralmente
-    http://localhost:8501)
+5. Abra o navegador na URL exibida pelo Streamlit
 
+```bash
+(geralmente http://localhost:8501)
+```
 ---
 
 ## ESTRUTURA DO PROJETO
 
 ```bash
-.
 ├── docker
 │   ├── data
 │   │   └── temperature.csv       # Arquivo CSV com dados de temperatura
@@ -81,7 +84,7 @@ streamlit run main.py
 │   └── main.py                   # Dashboard Streamlit
 ├── requirements.txt              # Dependências Python
 └── README.md
-
+```
 ---
 
 ## Funcionamento da Visualização
@@ -111,3 +114,5 @@ streamlit run main.py
 - Criação de dashboards responsivos com Streamlit.
 
 - Containerização de serviços e persistência de dados usando Docker e Docker Compose.
+
+---
