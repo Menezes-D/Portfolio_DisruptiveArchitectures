@@ -1,0 +1,13 @@
+services:
+  clickhouse:
+    image: yandex/clickhouse-server:latest
+    container_name: clickhouse-iot
+    ports:
+      - "8123:8123" # HTTP
+      - "9000:9000" # TCP (Client)
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./data:/data/   # <-- adiciona a pasta local 'data' dentro do container
+
+volumes:
+  clickhouse_data:
